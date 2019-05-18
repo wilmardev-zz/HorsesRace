@@ -39,11 +39,11 @@ public class hilo extends Thread {
         if (getName().equals("Jarvis")) {
             ti1 = System.currentTimeMillis();
             label.setLocation(0, 0);
-            while (label.getLocation().x < 900) {
+            while (label.getLocation().x < 1420) {
                 t1 = System.currentTimeMillis();
                 try {
                     posicion = (int) (Math.random() * 30 + 1);
-                    label.setLocation(label.getLocation().x + posicion, 270);
+                    label.setLocation(label.getLocation().x + posicion, 280);
                     Thread.sleep(50);
                 } catch (InterruptedException e) {
                 }
@@ -55,7 +55,7 @@ public class hilo extends Thread {
         if (getName().equals("Trueno")) {
             ti2 = System.currentTimeMillis();
             label.setLocation(0, 0);
-            while (label.getLocation().x < 900) {
+            while (label.getLocation().x < 1420) {
                 t2 = System.currentTimeMillis();
                 try {
                     posicion = (int) (Math.random() * 30 + 1);
@@ -71,7 +71,7 @@ public class hilo extends Thread {
         if (getName().equals("Zeus")) {
             ti3 = System.currentTimeMillis();
             label.setLocation(0, 0);
-            while (label.getLocation().x < 900) {
+            while (label.getLocation().x < 1420) {
                 t3 = System.currentTimeMillis();
                 try {
                     posicion = (int) (Math.random() * 30 + 1);
@@ -89,11 +89,11 @@ public class hilo extends Thread {
         if (getName().equals("Neron")) {
             ti4 = System.currentTimeMillis();
             label.setLocation(0, 0);
-            while (label.getLocation().x < 900) {
+            while (label.getLocation().x < 1420) {
                 t4 = System.currentTimeMillis();
                 try {
                     posicion = (int) (Math.random() * 30 + 1);
-                    label.setLocation(label.getLocation().x + posicion, 170);
+                    label.setLocation(label.getLocation().x + posicion, 400);
                     Thread.sleep(50);
                 } catch (InterruptedException e) {
 
@@ -104,14 +104,14 @@ public class hilo extends Thread {
         }
         
         //5
-        if (getName().equals("Cancerbero")) {
+        if (getName().equals("Anafea")) {
             ti5 = System.currentTimeMillis();
             label.setLocation(0, 0);
-            while (label.getLocation().x < 900) {
+            while (label.getLocation().x < 1420) {
                 t5 = System.currentTimeMillis();
                 try {
                     posicion = (int) (Math.random() * 30 + 1);
-                    label.setLocation(label.getLocation().x + posicion, 170);
+                    label.setLocation(label.getLocation().x + posicion, 525);
                     Thread.sleep(50);
                 } catch (InterruptedException e) {
 
@@ -122,14 +122,14 @@ public class hilo extends Thread {
         }
         
         //6
-        if (getName().equals("Guardian")) {
+        if (getName().equals("Cinforoso")) {
             ti6 = System.currentTimeMillis();
             label.setLocation(0, 0);
-            while (label.getLocation().x < 900) {
+            while (label.getLocation().x < 1420) {
                 t6 = System.currentTimeMillis();
                 try {
                     posicion = (int) (Math.random() * 30 + 1);
-                    label.setLocation(label.getLocation().x + posicion, 170);
+                    label.setLocation(label.getLocation().x + posicion, 640);
                     Thread.sleep(50);
                 } catch (InterruptedException e) {
 
@@ -140,20 +140,20 @@ public class hilo extends Thread {
         }
         
         //7
-        if (getName().equals("Estrellita")) {
+        if (getName().equals("Epifania")) {
             ti7 = System.currentTimeMillis();
             label.setLocation(0, 0);
-            while (label.getLocation().x < 900) {
+            while (label.getLocation().x < 1420) {
                 t7 = System.currentTimeMillis();
                 try {
                     posicion = (int) (Math.random() * 30 + 1);
-                    label.setLocation(label.getLocation().x + posicion, 170);
+                    label.setLocation(label.getLocation().x + posicion, 755);
                     Thread.sleep(50);
                 } catch (InterruptedException e) {
 
                 }
             }
-            time3 = (float) ((t7 - ti7) / 1000);
+            time7 = (float) ((t7 - ti7) / 1000);
             c7 = (animal + "  -  " + time7 + " segundos\n");
         }
         

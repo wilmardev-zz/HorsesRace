@@ -5,6 +5,7 @@
  */
 package vista;
 
+import javax.swing.JFrame;
 import logica.hilo;
 
 /**
@@ -42,19 +43,19 @@ public class frmPista extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Resultados = new javax.swing.JTextArea();
         Trueno = new javax.swing.JLabel();
-        Trueno1 = new javax.swing.JLabel();
         Zeus = new javax.swing.JLabel();
         Jarvis = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        Neron = new javax.swing.JLabel();
+        Anafea = new javax.swing.JLabel();
+        Cinforoso = new javax.swing.JLabel();
+        Epifania = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
-        jSeparator8 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,46 +81,46 @@ public class frmPista extends javax.swing.JFrame {
         Resultados.setPreferredSize(new java.awt.Dimension(164, 72));
         jScrollPane1.setViewportView(Resultados);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 860, 260, -1));
-        jPanel1.add(Trueno, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, 171));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 860, 270, 140));
 
-        Trueno1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Trueno.gif"))); // NOI18N
-        Trueno1.setText("Trueno");
-        jPanel1.add(Trueno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, 60));
+        Trueno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Trueno.gif"))); // NOI18N
+        Trueno.setText("Trueno");
+        jPanel1.add(Trueno, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, 60));
 
         Zeus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Zeus.gif"))); // NOI18N
         Zeus.setText("Zeus");
-        jPanel1.add(Zeus, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, 60));
+        jPanel1.add(Zeus, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, 60));
 
         Jarvis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Tiro al blanco.gif"))); // NOI18N
         Jarvis.setText("Jarvis");
-        jPanel1.add(Jarvis, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, 70));
+        jPanel1.add(Jarvis, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, 70));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Trueno - copia (2).gif"))); // NOI18N
-        jLabel3.setText("Neron");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 120, 60));
+        Neron.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Trueno - copia (2).gif"))); // NOI18N
+        Neron.setText("Neron");
+        jPanel1.add(Neron, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 120, 60));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Zeus - copia 2.gif"))); // NOI18N
-        jLabel4.setText("Cancerbero");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 130, 50));
+        Anafea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Zeus - copia 2.gif"))); // NOI18N
+        Anafea.setText("Anafea");
+        jPanel1.add(Anafea, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 120, 50));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blanco2.gif"))); // NOI18N
-        jLabel5.setText("Guardian");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 660, 130, 50));
+        Cinforoso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blanco2.gif"))); // NOI18N
+        Cinforoso.setText("Cinforoso");
+        jPanel1.add(Cinforoso, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 640, 130, 50));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Trueno - copia(3).gif"))); // NOI18N
-        jLabel6.setText("Estrellita");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 760, 120, 50));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 1530, 10));
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 973, -1));
-        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 1540, 10));
-        jSeparator4.getAccessibleContext().setAccessibleParent(jSeparator1);
-
-        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 372, 1530, 10));
-        jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 1540, 20));
+        Epifania.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Trueno - copia(3).gif"))); // NOI18N
+        Epifania.setText("Epifania");
+        jPanel1.add(Epifania, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 760, 120, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Fondoracer.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 1430, 1410));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1580, 1410));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 1540, 10));
+        jSeparator1.getAccessibleContext().setAccessibleParent(jSeparator2);
+
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 1530, 10));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 372, 1540, 10));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 1540, 10));
+        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, 1540, 10));
+        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 720, 1540, 20));
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -131,13 +132,13 @@ public class frmPista extends javax.swing.JFrame {
         * Se crea 7 hilos para cada caballo en competencia
         */
         Resultados.setText("");
-        hilo h1 = new hilo("Trueno", jSeparator1.getX(), Trueno1);
-        hilo h2 = new hilo("Zeus", jSeparator4.getX(), Zeus);
-        hilo h3 = new hilo("Jarvis", jSeparator5.getX(), Jarvis);
-        hilo h4 = new hilo("Nerón", jSeparator5.getX(), Jarvis);
-        hilo h5 = new hilo("Cancerbero", jSeparator5.getX(), Jarvis);
-        hilo h6 = new hilo("Guardián", jSeparator5.getX(), Jarvis);
-        hilo h7 = new hilo("Estrellita", jSeparator5.getX(), Jarvis);
+        hilo h1 = new hilo("Trueno", jSeparator1.getX(), Trueno);
+        hilo h2 = new hilo("Zeus", jSeparator2.getX(), Zeus);
+        hilo h3 = new hilo("Jarvis", jSeparator3.getX(), Jarvis);
+        hilo h4 = new hilo("Neron", jSeparator4.getX(), Neron);
+        hilo h5 = new hilo("Anafea", jSeparator5.getX(), Anafea);
+        hilo h6 = new hilo("Cinforoso", jSeparator6.getX(), Cinforoso);
+        hilo h7 = new hilo("Epifania", jSeparator6.getX(), Epifania);
         /**
         * Arrancan los hilos.
         */
@@ -183,28 +184,31 @@ public class frmPista extends javax.swing.JFrame {
             public void run() {
                 frm = new frmPista();
                 frm.setVisible(true);
+                frm.setSize(1580, 1480);
+                frm.setResizable(false);
+                frm.setLocationRelativeTo(null);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButInicioC;
+    private javax.swing.JLabel Anafea;
+    public javax.swing.JButton ButInicioC;
+    private javax.swing.JLabel Cinforoso;
+    private javax.swing.JLabel Epifania;
     private javax.swing.JLabel Jarvis;
-    private javax.swing.JTextArea Resultados;
+    private javax.swing.JLabel Neron;
+    public javax.swing.JTextArea Resultados;
     private javax.swing.JLabel Trueno;
-    private javax.swing.JLabel Trueno1;
     private javax.swing.JLabel Zeus;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JSeparator jSeparator8;
     // End of variables declaration//GEN-END:variables
 }
