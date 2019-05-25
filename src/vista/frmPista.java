@@ -191,13 +191,13 @@ public class frmPista extends javax.swing.JFrame {
         * Se crea 7 hilos para cada caballo en competencia
         */
         Resultados.setText("");
-        hilo h1 = new hilo("Jarvis", jSeparator1.getX(), Jarvis);
-        hilo h2 = new hilo("Trueno", jSeparator2.getX(), Trueno);
-        hilo h3 = new hilo("Zeus", jSeparator3.getX(), Zeus);
-        hilo h4 = new hilo("Neron", jSeparator4.getX(), Neron);
-        hilo h5 = new hilo("Anafea", jSeparator5.getX(), Anafea);
-        hilo h6 = new hilo("Cinforoso", jSeparator6.getX(), Cinforoso);
-        hilo h7 = new hilo("Epifania", jSeparator6.getX(), Epifania);
+        hilo h1 = new hilo("Jarvis", jSeparator1.getX(), Jarvis, 20);
+        hilo h2 = new hilo("Trueno", jSeparator2.getX(), Trueno, 100);
+        hilo h3 = new hilo("Zeus", jSeparator3.getX(), Zeus, 180);
+        hilo h4 = new hilo("Neron", jSeparator4.getX(), Neron, 260);
+        hilo h5 = new hilo("Anafea", jSeparator5.getX(), Anafea, 340);
+        hilo h6 = new hilo("Cinforoso", jSeparator6.getX(), Cinforoso, 420);
+        hilo h7 = new hilo("Epifania", jSeparator6.getX(), Epifania, 500);
         /**
         * Arrancan los hilos.
         */
