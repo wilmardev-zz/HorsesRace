@@ -5,7 +5,9 @@
  */
 package vista;
 
+import java.awt.Container;
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 import logica.hilo;
 
 /**
@@ -26,7 +28,6 @@ public class frmPista extends javax.swing.JFrame {
     public frmPista() {
         initComponents();
         Resultados.setEditable(false);
-
     }
 
     /**
@@ -38,33 +39,52 @@ public class frmPista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        ButInicioC = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        Resultados = new javax.swing.JTextArea();
-        Trueno = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jPanel2 = new javax.swing.JPanel();
         Zeus = new javax.swing.JLabel();
-        Jarvis = new javax.swing.JLabel();
-        Neron = new javax.swing.JLabel();
-        Anafea = new javax.swing.JLabel();
         Cinforoso = new javax.swing.JLabel();
+        Anafea = new javax.swing.JLabel();
         Epifania = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        Neron = new javax.swing.JLabel();
+        Trueno = new javax.swing.JLabel();
+        Jarvis = new javax.swing.JLabel();
+        ButInicioC = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Resultados = new javax.swing.JTextArea();
+        Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setMaximumSize(new java.awt.Dimension(974, 502));
-        jPanel1.setMinimumSize(new java.awt.Dimension(0, 0));
-        jPanel1.setOpaque(false);
-        jPanel1.setPreferredSize(new java.awt.Dimension(974, 502));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jScrollPane3.setMaximumSize(new java.awt.Dimension(1500, 1200));
+
+        jPanel2.setMaximumSize(new java.awt.Dimension(1500, 1200));
+
+        Zeus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Zeus.gif"))); // NOI18N
+        Zeus.setText("Zeus");
+
+        Cinforoso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blanco2.gif"))); // NOI18N
+        Cinforoso.setText("Cinforoso");
+
+        Anafea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Zeus - copia 2.gif"))); // NOI18N
+        Anafea.setText("Anafea");
+
+        Epifania.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Trueno - copia(3).gif"))); // NOI18N
+        Epifania.setText("Epifania");
+
+        Neron.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Trueno - copia (2).gif"))); // NOI18N
+        Neron.setText("Neron");
+
+        Trueno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Trueno.gif"))); // NOI18N
+        Trueno.setText("Trueno");
+
+        Jarvis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Tiro al blanco.gif"))); // NOI18N
+        Jarvis.setText("Jarvis");
 
         ButInicioC.setText("Go!");
         ButInicioC.addActionListener(new java.awt.event.ActionListener() {
@@ -72,7 +92,6 @@ public class frmPista extends javax.swing.JFrame {
                 ButInicioCActionPerformed(evt);
             }
         });
-        jPanel1.add(ButInicioC, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 890, -1, -1));
 
         Resultados.setEditable(false);
         Resultados.setColumns(20);
@@ -81,48 +100,88 @@ public class frmPista extends javax.swing.JFrame {
         Resultados.setPreferredSize(new java.awt.Dimension(164, 72));
         jScrollPane1.setViewportView(Resultados);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 860, 270, 140));
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Jarvis)
+                            .addComponent(Trueno)
+                            .addComponent(Neron)
+                            .addComponent(Zeus)
+                            .addComponent(Anafea)
+                            .addComponent(Cinforoso)
+                            .addComponent(jSeparator5, javax.swing.GroupLayout.DEFAULT_SIZE, 1106, Short.MAX_VALUE)
+                            .addComponent(jSeparator4)
+                            .addComponent(jSeparator3)
+                            .addComponent(jSeparator2)
+                            .addComponent(jSeparator1)
+                            .addComponent(jSeparator6))
+                        .addContainerGap(136, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Epifania)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(171, 171, 171)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(64, 64, 64)
+                                .addComponent(ButInicioC)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(335, 335, 335))))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(Jarvis)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Trueno)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 5, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Zeus)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Neron)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Anafea)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Cinforoso)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Epifania)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(ButInicioC)
+                                .addGap(93, 93, 93))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(34, 34, 34))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(78, 78, 78))))
+        );
 
-        Trueno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Trueno.gif"))); // NOI18N
-        Trueno.setText("Trueno");
-        jPanel1.add(Trueno, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, 60));
+        jScrollPane3.setViewportView(jPanel2);
 
-        Zeus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Zeus.gif"))); // NOI18N
-        Zeus.setText("Zeus");
-        jPanel1.add(Zeus, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, 60));
-
-        Jarvis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Tiro al blanco.gif"))); // NOI18N
-        Jarvis.setText("Jarvis");
-        jPanel1.add(Jarvis, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, 70));
-
-        Neron.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Trueno - copia (2).gif"))); // NOI18N
-        Neron.setText("Neron");
-        jPanel1.add(Neron, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 120, 60));
-
-        Anafea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Zeus - copia 2.gif"))); // NOI18N
-        Anafea.setText("Anafea");
-        jPanel1.add(Anafea, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 120, 50));
-
-        Cinforoso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blanco2.gif"))); // NOI18N
-        Cinforoso.setText("Cinforoso");
-        jPanel1.add(Cinforoso, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 640, 130, 50));
-
-        Epifania.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Trueno - copia(3).gif"))); // NOI18N
-        Epifania.setText("Epifania");
-        jPanel1.add(Epifania, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 760, 120, 50));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Fondoracer.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1580, 1410));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 1540, 10));
-        jSeparator1.getAccessibleContext().setAccessibleParent(jSeparator2);
-
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 1530, 10));
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 372, 1540, 10));
-        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 1540, 10));
-        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, 1540, 10));
-        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 720, 1540, 20));
-
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
+        getContentPane().add(jScrollPane3, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -132,9 +191,9 @@ public class frmPista extends javax.swing.JFrame {
         * Se crea 7 hilos para cada caballo en competencia
         */
         Resultados.setText("");
-        hilo h1 = new hilo("Trueno", jSeparator1.getX(), Trueno);
-        hilo h2 = new hilo("Zeus", jSeparator2.getX(), Zeus);
-        hilo h3 = new hilo("Jarvis", jSeparator3.getX(), Jarvis);
+        hilo h1 = new hilo("Jarvis", jSeparator1.getX(), Jarvis);
+        hilo h2 = new hilo("Trueno", jSeparator2.getX(), Trueno);
+        hilo h3 = new hilo("Zeus", jSeparator3.getX(), Zeus);
         hilo h4 = new hilo("Neron", jSeparator4.getX(), Neron);
         hilo h5 = new hilo("Anafea", jSeparator5.getX(), Anafea);
         hilo h6 = new hilo("Cinforoso", jSeparator6.getX(), Cinforoso);
@@ -184,31 +243,32 @@ public class frmPista extends javax.swing.JFrame {
             public void run() {
                 frm = new frmPista();
                 frm.setVisible(true);
-                frm.setSize(1580, 1480);
-                frm.setResizable(false);
+                //frm.setSize(1580, 1480);
+                frm.setResizable(true);
                 frm.setLocationRelativeTo(null);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Anafea;
+    public javax.swing.JLabel Anafea;
     public javax.swing.JButton ButInicioC;
-    private javax.swing.JLabel Cinforoso;
-    private javax.swing.JLabel Epifania;
-    private javax.swing.JLabel Jarvis;
-    private javax.swing.JLabel Neron;
+    public javax.swing.JLabel Cinforoso;
+    public javax.swing.JLabel Epifania;
+    public javax.swing.JLabel Fondo;
+    public javax.swing.JLabel Jarvis;
+    public javax.swing.JLabel Neron;
     public javax.swing.JTextArea Resultados;
-    private javax.swing.JLabel Trueno;
-    private javax.swing.JLabel Zeus;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JSeparator jSeparator6;
+    public javax.swing.JLabel Trueno;
+    public javax.swing.JLabel Zeus;
+    public javax.swing.JPanel jPanel2;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JScrollPane jScrollPane3;
+    public javax.swing.JSeparator jSeparator1;
+    public javax.swing.JSeparator jSeparator2;
+    public javax.swing.JSeparator jSeparator3;
+    public javax.swing.JSeparator jSeparator4;
+    public javax.swing.JSeparator jSeparator5;
+    public javax.swing.JSeparator jSeparator6;
     // End of variables declaration//GEN-END:variables
 }

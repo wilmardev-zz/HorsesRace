@@ -2,8 +2,6 @@ package logica;
 
 import vista.frmPista;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import java.awt.Component;
 
 /**
  * Clase Hilo, constructor y método que genera el movimiento de caballos.
@@ -39,11 +37,11 @@ public class hilo extends Thread {
         if (getName().equals("Jarvis")) {
             ti1 = System.currentTimeMillis();
             label.setLocation(0, 0);
-            while (label.getLocation().x < 1420) {
+            while (label.getLocation().x < 1100) {
                 t1 = System.currentTimeMillis();
                 try {
                     posicion = (int) (Math.random() * 30 + 1);
-                    label.setLocation(label.getLocation().x + posicion, 280);
+                    label.setLocation(label.getLocation().x + posicion, 20);
                     Thread.sleep(50);
                 } catch (InterruptedException e) {
                 }
@@ -55,11 +53,11 @@ public class hilo extends Thread {
         if (getName().equals("Trueno")) {
             ti2 = System.currentTimeMillis();
             label.setLocation(0, 0);
-            while (label.getLocation().x < 1420) {
+            while (label.getLocation().x < 1100) {
                 t2 = System.currentTimeMillis();
                 try {
                     posicion = (int) (Math.random() * 30 + 1);
-                    label.setLocation(label.getLocation().x + posicion, 60);
+                    label.setLocation(label.getLocation().x + posicion, 100);
                     Thread.sleep(50);
                 } catch (InterruptedException e) {
                 }
@@ -71,11 +69,11 @@ public class hilo extends Thread {
         if (getName().equals("Zeus")) {
             ti3 = System.currentTimeMillis();
             label.setLocation(0, 0);
-            while (label.getLocation().x < 1420) {
+            while (label.getLocation().x < 1100) {
                 t3 = System.currentTimeMillis();
                 try {
                     posicion = (int) (Math.random() * 30 + 1);
-                    label.setLocation(label.getLocation().x + posicion, 170);
+                    label.setLocation(label.getLocation().x + posicion, 180);
                     Thread.sleep(50);
                 } catch (InterruptedException e) {
 
@@ -89,11 +87,11 @@ public class hilo extends Thread {
         if (getName().equals("Neron")) {
             ti4 = System.currentTimeMillis();
             label.setLocation(0, 0);
-            while (label.getLocation().x < 1420) {
+            while (label.getLocation().x < 1100) {
                 t4 = System.currentTimeMillis();
                 try {
                     posicion = (int) (Math.random() * 30 + 1);
-                    label.setLocation(label.getLocation().x + posicion, 400);
+                    label.setLocation(label.getLocation().x + posicion, 260);
                     Thread.sleep(50);
                 } catch (InterruptedException e) {
 
@@ -107,11 +105,11 @@ public class hilo extends Thread {
         if (getName().equals("Anafea")) {
             ti5 = System.currentTimeMillis();
             label.setLocation(0, 0);
-            while (label.getLocation().x < 1420) {
+            while (label.getLocation().x < 1100) {
                 t5 = System.currentTimeMillis();
                 try {
                     posicion = (int) (Math.random() * 30 + 1);
-                    label.setLocation(label.getLocation().x + posicion, 525);
+                    label.setLocation(label.getLocation().x + posicion, 340);
                     Thread.sleep(50);
                 } catch (InterruptedException e) {
 
@@ -125,11 +123,11 @@ public class hilo extends Thread {
         if (getName().equals("Cinforoso")) {
             ti6 = System.currentTimeMillis();
             label.setLocation(0, 0);
-            while (label.getLocation().x < 1420) {
+            while (label.getLocation().x < 1100) {
                 t6 = System.currentTimeMillis();
                 try {
                     posicion = (int) (Math.random() * 30 + 1);
-                    label.setLocation(label.getLocation().x + posicion, 640);
+                    label.setLocation(label.getLocation().x + posicion, 420);
                     Thread.sleep(50);
                 } catch (InterruptedException e) {
 
@@ -143,11 +141,11 @@ public class hilo extends Thread {
         if (getName().equals("Epifania")) {
             ti7 = System.currentTimeMillis();
             label.setLocation(0, 0);
-            while (label.getLocation().x < 1420) {
+            while (label.getLocation().x < 1100) {
                 t7 = System.currentTimeMillis();
                 try {
                     posicion = (int) (Math.random() * 30 + 1);
-                    label.setLocation(label.getLocation().x + posicion, 755);
+                    label.setLocation(label.getLocation().x + posicion, 500);
                     Thread.sleep(50);
                 } catch (InterruptedException e) {
 
@@ -159,9 +157,11 @@ public class hilo extends Thread {
         
         
         //Retorna las posiciones al panel
-        String posiciones = frmPista.frm.Resultados.getText() + (c1 + c2 + c3 + c4 + c5 + c6 + c7);
-        frmPista.frm.Resultados.setText(posiciones);
-        frmPista.frm.ButInicioC.setEnabled(true);
+        //if(!c1.equals("") && !c2.equals("") && !c3.equals("") && !c4.equals("") && !c5.equals("") && !c6.equals("") && !c7.equals("")){
+            String posiciones = frmPista.frm.Resultados.getText() + (c1 + c2 + c3 + c4 + c5 + c6 + c7);
+            frmPista.frm.Resultados.setText(posiciones);
+            frmPista.frm.ButInicioC.setEnabled(true);
+        //}
     }
 
 }
