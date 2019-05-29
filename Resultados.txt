@@ -1,0 +1,18 @@
+...RESULTADOS...
+Neron  -  2.941 segundos
+Zeus  -  3.354 segundos
+Jarvis  -  3.447 segundos
+Trueno  -  3.548 segundos
+Cinforoso  -  3.606 segundos
+Anafea  -  3.699 segundos
+Epifania  -  3.806 segundos
+
+...RESULTADOS...
+Cinforoso  -  3.285 segundos
+Trueno  -  3.539 segundos
+Jarvis  -  3.638 segundos
+Neron  -  3.636 segundos
+Zeus  -  3.738 segundos
+Anafea  -  3.839 segundos
+Epifania  -  4.002 segundos
+

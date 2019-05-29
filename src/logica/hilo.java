@@ -1,15 +1,19 @@
+//@author Wilmar Santiago Duque valencia / Documento: 1152707680
+//@author David Ricardo Ramírez Álvarez  / Documento: 1037576450
 package logica;
 
+import java.io.BufferedWriter;
 import vista.frmPista;
 import javax.swing.JLabel;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-/**
- * Clase Hilo, constructor y método que genera el movimiento de caballos.
- *
- * @author Wilmar Santiago Duque valencia / Documento: 1152707680
- * @author Kevin García Hincapié / Documento: 1018350636
- * @since paquete logica
- * @version Carrera Caballos V4.0
+/*
+ * Clase Hilo, constructor y método que genera el movimiento de caballos
  */
 public class hilo extends Thread {
 
@@ -46,12 +50,20 @@ public class hilo extends Thread {
             }
         }
         raceTime = (float) ((finalTime - initTime) / 1000);
+
         result = (animal + "  -  " + raceTime + " segundos\n");
 
         //Retorna las posiciones al panel
         String posiciones = frmPista.frm.Resultados.getText() + result;
-        frmPista.frm.Resultados.setText(posiciones);
-        frmPista.frm.ButInicioC.setEnabled(true);
-    }
+        
 
+        frmPista.frm.Resultados.setText(posiciones);
+
+        frmPista.frm.ButInicioC.setEnabled(true);
+
+        
+//            
+    }
+        
 }
+    

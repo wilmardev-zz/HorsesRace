@@ -1,25 +1,31 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * @author Wilmar Santiago Duque valencia / Documento: 1152707680
+ * @author David Ricardo Ramírez Álvarez / Documento: 1037576450
  */
 package vista;
 
 import java.awt.Container;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import logica.hilo;
 
-/**
- * Construcción del tablero de carrera.
- *
- * @author Wilmar Santiago Duque valencia / Documento: 1152707680
- * @author Kevin García Hincapié / Documento: 1018350636
- * @since logica
- * @version Carrera Caballos V4.0
- */
-public class frmPista extends javax.swing.JFrame {
 
+
+public class frmPista extends javax.swing.JFrame {
+    
+    private static hilo h1;
+    private static hilo h2;
+    private static hilo h3;
+    private static hilo h4;
+    private static hilo h5;
+    private static hilo h6;
+    private static hilo h7;   
+    
     public static frmPista frm;
 
     /**
@@ -28,6 +34,7 @@ public class frmPista extends javax.swing.JFrame {
     public frmPista() {
         initComponents();
         Resultados.setEditable(false);
+        
     }
 
     /**
@@ -58,11 +65,15 @@ public class frmPista extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Resultados = new javax.swing.JTextArea();
         Fondo = new javax.swing.JLabel();
+        InterrumpirBtn = new javax.swing.JButton();
+        BtnResultados = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jScrollPane3.setMaximumSize(new java.awt.Dimension(1500, 1200));
 
+        jPanel2.setBackground(new java.awt.Color(20, 155, 71));
+        jPanel2.setForeground(new java.awt.Color(20, 155, 71));
         jPanel2.setMaximumSize(new java.awt.Dimension(1500, 1200));
 
         Zeus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Zeus.gif"))); // NOI18N
@@ -96,9 +107,23 @@ public class frmPista extends javax.swing.JFrame {
         Resultados.setEditable(false);
         Resultados.setColumns(20);
         Resultados.setRows(5);
-        Resultados.setText("                    *** Resultados ***");
+        Resultados.setText("                   *** RESULTADOS ***");
         Resultados.setPreferredSize(new java.awt.Dimension(164, 72));
         jScrollPane1.setViewportView(Resultados);
+
+        InterrumpirBtn.setText("Interrumpir");
+        InterrumpirBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InterrumpirBtnActionPerformed(evt);
+            }
+        });
+
+        BtnResultados.setText("Resultados");
+        BtnResultados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnResultadosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -121,17 +146,21 @@ public class frmPista extends javax.swing.JFrame {
                             .addComponent(jSeparator2)
                             .addComponent(jSeparator1)
                             .addComponent(jSeparator6))
-                        .addContainerGap(136, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Epifania)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(171, 171, 171)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(64, 64, 64)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
                                 .addComponent(ButInicioC)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                        .addComponent(InterrumpirBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BtnResultados))
                         .addGap(335, 335, 335))))
         );
         jPanel2Layout.setVerticalGroup(
@@ -168,7 +197,9 @@ public class frmPista extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(ButInicioC)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(ButInicioC)
+                                    .addComponent(InterrumpirBtn))
                                 .addGap(93, 93, 93))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -176,7 +207,9 @@ public class frmPista extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(78, 78, 78))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(BtnResultados)
+                        .addGap(92, 92, 92))))
         );
 
         jScrollPane3.setViewportView(jPanel2);
@@ -188,18 +221,18 @@ public class frmPista extends javax.swing.JFrame {
 
     private void ButInicioCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButInicioCActionPerformed
         /**
-        * Se crea 7 hilos para cada caballo en competencia
+        * Se crea 7 hilos, uno por cada caballo en competencia
         */
         Resultados.setText("");
-        hilo h1 = new hilo("Jarvis", jSeparator1.getX(), Jarvis, 20);
-        hilo h2 = new hilo("Trueno", jSeparator2.getX(), Trueno, 100);
-        hilo h3 = new hilo("Zeus", jSeparator3.getX(), Zeus, 180);
-        hilo h4 = new hilo("Neron", jSeparator4.getX(), Neron, 260);
-        hilo h5 = new hilo("Anafea", jSeparator5.getX(), Anafea, 340);
-        hilo h6 = new hilo("Cinforoso", jSeparator6.getX(), Cinforoso, 420);
-        hilo h7 = new hilo("Epifania", jSeparator6.getX(), Epifania, 500);
+        //hilo h1 = new hilo("Jarvis", jSeparator1.getX(), Jarvis, 20);
+//        hilo h2 = new hilo("Trueno", jSeparator2.getX(), Trueno, 100);
+//        hilo h3 = new hilo("Zeus", jSeparator3.getX(), Zeus, 180);
+//        hilo h4 = new hilo("Neron", jSeparator4.getX(), Neron, 260);
+//        hilo h5 = new hilo("Anafea", jSeparator5.getX(), Anafea, 340);
+//        hilo h6 = new hilo("Cinforoso", jSeparator6.getX(), Cinforoso, 420);
+//        hilo h7 = new hilo("Epifania", jSeparator6.getX(), Epifania, 500);
         /**
-        * Arrancan los hilos.
+        * Inicializar los hilos.
         */
         h1.start();
         h2.start();
@@ -209,6 +242,57 @@ public class frmPista extends javax.swing.JFrame {
         h6.start();
         h7.start();
     }//GEN-LAST:event_ButInicioCActionPerformed
+
+    private void InterrumpirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InterrumpirBtnActionPerformed
+      
+        h1.stop();
+        Jarvis.setLocation(0, 20);
+        h2.stop();
+        Trueno.setLocation(0,100);
+        h3.stop();
+        Zeus.setLocation(0,180);
+        h4.stop();
+        Neron.setLocation(0,260);
+        h5.stop();
+        Anafea.setLocation(0,340);
+        h6.stop();
+        Cinforoso.setLocation(0,420);
+        h7.stop();
+        Epifania.setLocation(0,500);
+    }//GEN-LAST:event_InterrumpirBtnActionPerformed
+
+    private void BtnResultadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnResultadosActionPerformed
+        
+        String result = frmPista.frm.Resultados.getText();
+        String Resultados = "C:\\Users\\DavidR2\\Downloads\\6.Sistemas Operativos\\HorsesRace\\Resultados.txt";
+        FileWriter fw = null;
+        System.out.println(result);
+
+        
+            try {
+                fw = new FileWriter(Resultados, true);
+                BufferedWriter bw = new BufferedWriter(fw);
+                //PrintWriter salArch = new PrintWriter(bw);
+                
+                bw.write("...RESULTADOS...");
+                bw.write("\n");
+                bw.write(result);             
+                bw.write("\n");             
+                bw.close();
+                JOptionPane.showMessageDialog(null,"El archivo con los Resultados ha sido creado!!");
+            } catch (IOException ex) { 
+                ex.printStackTrace();
+                System.out.println("error");
+            } finally {
+                if (fw != null) {
+                    try {//cierra el flujo ppal
+                        fw.close();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+    }//GEN-LAST:event_BtnResultadosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -245,30 +329,43 @@ public class frmPista extends javax.swing.JFrame {
                 frm.setVisible(true);
                 //frm.setSize(1580, 1480);
                 frm.setResizable(true);
+                frm.setExtendedState(MAXIMIZED_BOTH);//Jframe maximizado
                 frm.setLocationRelativeTo(null);
+                
+                h1 = new hilo("Jarvis", jSeparator1.getX(), Jarvis, 20);
+                h2 = new hilo("Trueno", jSeparator2.getX(), Trueno, 100);
+                h3 = new hilo("Zeus", jSeparator3.getX(), Zeus, 180);
+                h4 = new hilo("Neron", jSeparator4.getX(), Neron, 260);
+                h5 = new hilo("Anafea", jSeparator5.getX(), Anafea, 340);
+                h6 = new hilo("Cinforoso", jSeparator6.getX(), Cinforoso, 420);
+                h7 = new hilo("Epifania", jSeparator6.getX(), Epifania, 500);
+                frm.ButInicioC.setEnabled(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JLabel Anafea;
+    static javax.swing.JLabel Anafea;
+    public javax.swing.JButton BtnResultados;
     public javax.swing.JButton ButInicioC;
-    public javax.swing.JLabel Cinforoso;
-    public javax.swing.JLabel Epifania;
+    static javax.swing.JLabel Cinforoso;
+    static javax.swing.JLabel Epifania;
     public javax.swing.JLabel Fondo;
-    public javax.swing.JLabel Jarvis;
-    public javax.swing.JLabel Neron;
+    public javax.swing.JButton InterrumpirBtn;
+    public static javax.swing.JLabel Jarvis;
+    static javax.swing.JLabel Neron;
     public javax.swing.JTextArea Resultados;
-    public javax.swing.JLabel Trueno;
-    public javax.swing.JLabel Zeus;
-    public javax.swing.JPanel jPanel2;
+    static javax.swing.JLabel Trueno;
+    static javax.swing.JLabel Zeus;
+    public static javax.swing.JPanel jPanel2;
     public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JScrollPane jScrollPane3;
-    public javax.swing.JSeparator jSeparator1;
-    public javax.swing.JSeparator jSeparator2;
-    public javax.swing.JSeparator jSeparator3;
-    public javax.swing.JSeparator jSeparator4;
-    public javax.swing.JSeparator jSeparator5;
-    public javax.swing.JSeparator jSeparator6;
+    public static javax.swing.JSeparator jSeparator1;
+    public static javax.swing.JSeparator jSeparator2;
+    public static javax.swing.JSeparator jSeparator3;
+    public static javax.swing.JSeparator jSeparator4;
+    public static javax.swing.JSeparator jSeparator5;
+    public static javax.swing.JSeparator jSeparator6;
     // End of variables declaration//GEN-END:variables
 }
